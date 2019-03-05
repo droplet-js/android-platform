@@ -1,2 +1,31 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="platform.compatibility.android" />
+    package="platform.compatibility.android">
+
+    <!-- 屏幕支持 -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application android:usesCleartextTraffic="true">
+
+        <!-- 声明支持的最大屏幕高宽比 -->
+        <!-- 传统屏幕：ratio_float = 16/9 = 1.778 -->
+        <!-- 三星S8屏幕：ratio_float = 18.5/9 = 2.056 -->
+        <!-- 鉴于目前全面屏屏幕比例，将ratio_float设置为2.1即可适配一众全面屏手机 -->
+        <!-- 随着手机屏幕发展，这个值会更大 -->
+        <!--<meta-data-->
+        <!--android:name="android.max_aspect"-->
+        <!--android:value="ratio_float" />-->
+        <meta-data android:name="android.max_aspect"
+            android:value="1074580736.000000"/>
+
+        <!-- 华为手机刘海屏 -->
+        <meta-data android:name="android.notch_support" android:value="true"/>
+
+        <!-- 小米手机刘海屏 -->
+        <meta-data android:name="notch.config" android:value="portrait|landscape"/>
+    </application>
+</manifest>
