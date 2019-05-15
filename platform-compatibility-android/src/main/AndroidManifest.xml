@@ -23,16 +23,6 @@
             android:name="android.max_aspect"
             android:value="1074580736.000000" />
 
-        <!-- 华为手机刘海屏 -->
-        <meta-data
-            android:name="android.notch_support"
-            android:value="true" />
-
-        <!-- 小米手机刘海屏 -->
-        <meta-data
-            android:name="notch.config"
-            android:value="portrait|landscape" />
-
         <!-- Android P -->
         <uses-library
             android:name="org.apache.http.legacy"
